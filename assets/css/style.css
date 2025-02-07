@@ -1,6 +1,7 @@
 /* start light mode styling */
 	:root {
 		--text: white;
+		--text-shadow:20px 20px 20px #000000;
 		--border: #5a7678;
 		--accent: #1cc36a;
 		--bg: rgb(30, 59, 148);
@@ -9,7 +10,7 @@
 	}
 	header {
 		background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.2)), 
-		url('../assets/images/backgrounds/cherry-blossoms.jpg');
+		url('../images/backgrounds/cherry-blossoms.jpg');
 	}
 /* end light mode styling */
 
@@ -18,6 +19,7 @@
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--text: white;
+			--text-shadow:20px 20px 20px #000000;
 			--border: #5a7678;
 			--accent: #1cc36a;
 			--bg: rgb(30, 59, 148);
@@ -27,7 +29,7 @@
 		}
 		header {
 			background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), 
-			url('../assets/images/backgrounds/cherry-blossoms.jpg');
+			url('../images/backgrounds/cherry-blossoms.jpg');
 		}
 	}
 /* end dark mode styling */
@@ -42,7 +44,7 @@ body {
 	color: var(--text);
 
 	background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.0)), 
-	url("../assets/images/tiles/tree-tiles-small.png");
+	url("../images/tiles/tree-tiles-small.png");
 	background-repeat: repeat;
 	/* page background pattern 
 	background-color: var(--gradientTop);
