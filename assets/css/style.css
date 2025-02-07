@@ -3,7 +3,6 @@
 		--text: white;
 		--border: #5a7678;
 		--accent: #1cc36a;
-		--visited: #8060b6;
 		--bg: rgb(30, 59, 148);
 		--gradientBottom: rgba(12, 24, 87, 0.75);
 		--gradientTop: rgba(34, 158, 96, 0.75);
@@ -21,7 +20,6 @@
 			--text: white;
 			--border: #5a7678;
 			--accent: #1cc36a;
-			--visited: #8060b6;
 			--bg: rgb(30, 59, 148);
 			--gradientBottom: rgba(12, 24, 87, 0.75);
 			--gradientTop: rgba(34, 158, 96, 0.75);
@@ -123,7 +121,7 @@ nav a {
 	text-decoration: none;
 }
 nav a:link, nav a:visited { 
-	color: var(--visited);
+	color: #8060b6;
 }
 nav a:hover, nav a:focus {
 	background: linear-gradient(to right,var(--bg), var(--gradientBottom), 
@@ -195,5 +193,5 @@ a:hover, a:focus {
 	text-shadow: 1px 1px 2px #000000;
 }
 a:visited {
-	color: var(--visited);
+	color: #8060b6;
 }
