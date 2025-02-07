@@ -187,12 +187,15 @@ h4 {
 img { max-width: 100%; }
 pre { overflow-x: auto; }
 
-
+a {
+	text-shadow: 1px 1px 2px #000000; /*general link styling*/
+}
 a:hover, a:focus {
 	font-style: none;
 	font-weight: bold;
-	text-shadow: 1px 1px 2px #000000;
+	text-shadow: 1px 1px 2px #000000; /*hovering links*/
 }
 a:visited {
 	color: #8060b6;
+	text-shadow: 1px 1px 2px #000000; /*visited links*/
 }
