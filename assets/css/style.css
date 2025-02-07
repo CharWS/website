@@ -3,6 +3,7 @@
 		--text: white;
 		--border: #5a7678;
 		--accent: #1cc36a;
+		--visited: #310e6d;
 		--bg: rgb(30, 59, 148);
 		--gradientBottom: rgba(12, 24, 87, 0.75);
 		--gradientTop: rgba(34, 158, 96, 0.75);
@@ -43,7 +44,7 @@ body {
 	color: var(--text);
 
 	background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.0)), 
-	url("../images/tiles/fern-tiles-small.jpg");
+	url('../images/tiles/fern-tiles-small.jpg');
 	background-repeat: repeat;
 	/* page background pattern 
 	background-color: var(--gradientTop);
@@ -68,8 +69,8 @@ body {
 	/* container background pattern */
 	background-color: var(--gradientBottom);
 	background-image: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.2)), 
-		url("../images/tiles/blue-tiles-small.png"); 
-		/*repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));*/
+	url('../images/tiles/blue-tiles-small.png'); 
+	/*repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));*/
 }
 /* these control the column widths */
 .small { flex: 1 1 9%; }
