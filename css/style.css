@@ -42,7 +42,7 @@ body {
 	color: var(--text);
 
 	background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.0)), 
-	url(/images/tiles/blue-tiles-small.png);
+	url("../images/tiles/tree-tiles-small.png");
 	background-repeat: repeat;
 	/* page background pattern 
 	background-color: var(--gradientTop);
