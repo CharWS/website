@@ -115,8 +115,8 @@ nav {
 	border-style: solid;
 	/*border-radius: 3px;*/
 	padding: 5px;
-	background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), 
-	url('../images/tiles/stone-tiles-small.png');
+	background: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), 
+	url('../images/tiles/papyrus-tiles.jpg');
 }
 nav div {
 	text-align: center;
