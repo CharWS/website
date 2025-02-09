@@ -36,6 +36,10 @@
 * { 
 	box-sizing: border-box;
 }
+* { 
+	scrollbar-color: rgb(29, 93, 12) #351e04; 
+}
+
 body {
 	padding: 10px;
 	font-family: 'MS PGothic', sans-serif;
@@ -106,6 +110,11 @@ header span {
 	color: var(--gradientTop); /*main color*/
 }
 
+ul.nopoints {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
 
 nav {
 	/*border: 4px ridge var(--border);*/
@@ -126,7 +135,7 @@ nav div {
 nav a {
 	display: block;
 	margin: 5px;
-	background: linear-gradient(to right,var(--bg),var(--bg));
+	/*background: linear-gradient(to right,var(--bg),var(--bg));*/
 	border-radius: 5px;
 	padding: 2px 7px;
 	text-decoration: none;
@@ -134,9 +143,9 @@ nav a {
 nav a:link, nav a:visited { 
 	color: #8060b6;
 }
-nav a:hover, nav a:focus {
-	background: var(--bg) /*background color of nav with mouse hover currently same as base*/
-}
+/*nav a:hover, nav a:focus {
+	background: var(--bg) background color of nav with mouse hover currently same as base
+}*/
 
 /* optional button styling like in the preview */
 div.small > img {
@@ -208,8 +217,8 @@ a {
 	text-shadow: 1px 1px 2px #000000; /*general link styling*/
 }
 a:hover, a:focus {
-	font-style: none;
-	font-weight: bold;
+	font-style: italic;
+	font-weight: none;
 	text-shadow: 1px 1px 2px #000000; /*hovering links*/
 }
 a:visited {
