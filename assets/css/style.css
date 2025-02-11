@@ -1,15 +1,18 @@
 /* start light mode styling */
 	:root {
-		--text: white;
-		--border: #9c6126;
-		--accent: #1cc36a;
-		--bg: rgb(30, 59, 148);
-		--gradientTop: rgba(34, 158, 96, 0.75);
-		--gradientBottom: rgba(12, 24, 87, 0.75);
+		--text: #ffeecc;
+		--border: #45293f;
+		--accent: #593a5f;
+		--bg: #336644;
+		--gradientTop: #668855;
+		--gradientBottom: #334444;
+		a:link { color: #ffb0a3; }
 	}
 	header {
 		background: linear-gradient(rgb(0,0,0,0.2),rgb(0,0,0,0.2)), 
-		url('../images/backgrounds/cherry-blossoms.jpg');
+		url('../images/backgrounds/cherry-background-dithered.png');
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 /* end light mode styling */
 
@@ -17,17 +20,20 @@
 /* start dark mode styling */
 	@media (prefers-color-scheme: dark) {
 		:root {
-			--text: white;
-			--border: #9c6126;
-			--accent: #8060b6;
-			--bg: rgb(30, 59, 148);
-			--gradientTop: rgba(30, 131, 102, 0.75);
-			--gradientBottom: rgba(0, 45, 32, 0.75);
-			a:link { color: #1cc36a; }
+			--text: #ffeecc;
+			--border: #45293f;
+			--accent: #593a5f;
+			--bg: #336644;
+			--gradientTop: #668855;
+			--gradientBottom: #334444;
+			a:link { color: #ffb0a3; }
 		}
 		header {
 			background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), 
-			url('../images/backgrounds/cherry-blossoms.jpg');
+			url('../images/backgrounds/cherry-background-dithered.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+
 		}
 	}
 /* end dark mode styling */
@@ -37,7 +43,7 @@
 	box-sizing: border-box;
 }
 * { 
-	scrollbar-color: rgb(29, 93, 12) #351e04; 
+	scrollbar-color: #a9b2a2  #576069; 
 }
 
 body {
@@ -57,11 +63,13 @@ body {
 .container {
 	max-width: 60rem;
 	margin: 5vw auto 12px auto;
-	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
+	box-shadow: 0 0 0 4px #b0a987;
+	outline: dashed 8px #993d41;
+	/*border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
 	border-image-outset: 8px;
 	border-width: 20px;
 	border-style: solid;
-	/*border: 8px ridge var(--border);
+	border: 8px ridge var(--border);
 	outline: 3px solid var(--gradientTop);
 	outline-offset: 3px;
 	border-radius: 5px;*/
@@ -70,14 +78,18 @@ body {
 	padding: 5px;
 	gap: 5px;
 
-	/* container background pattern */
-	/*background-color: var(--gradientBottom);*/
+	background-color: var(--gradientTop);
+	background-image:  linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg));
+	background-size: 20px 35px;
+	background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+	/* container background pattern 
+	background-color: var(--gradientBottom);
 	background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), 
-	url('../images/backgrounds/wildflower-meadow-small.jpg'); 
-	/*repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));*/
+	url('../images/backgrounds/wildflower-meadow-small.jpg');
+	repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));*/
 }
 /* these control the column widths */
-.small { flex: 1 1 9%; }
+.small { flex: 0 1 9%; }
 .large { flex: 1 1 74%; }
 .full { flex: 1 1 100%; }
 .half { flex: 1 1 49%; }
@@ -90,7 +102,7 @@ header {
 	width: 100%;
 	height: 200px; /* change banner height here*/
 	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
-	border-image-outset: 3px;
+	border-image-outset: 3px 0px;
 	border-width: 10px;
 	border-style: solid;
 	/*border: 4px ridge var(--border);
@@ -98,16 +110,17 @@ header {
 	position: relative;
 }
 header span {
+	/* header text */
 	font-size: 3rem;
 	position: absolute;
 	bottom: 0;
 	right: 5px;
 	margin: 5px;
 	font-weight: bold;
+	color: #3bb547; /*main color*/
 	text-shadow: 
-		-1px -1px var(--text), /*highlight*/
-		1px 1px var(--accent); /*dark shadow*/
-	color: var(--gradientTop); /*main color*/
+		-1px -1px #f697ff, /*highlight*/
+		1px 1px #435159; /*dark shadow*/
 }
 
 ul.nopoints {
@@ -147,28 +160,37 @@ nav a:link, nav a:visited {
 	background: var(--bg) background color of nav with mouse hover currently same as base
 }*/
 
+article {
+	border-width: 2px;
+	border-style: ridge;
+	border-color: var(--border);
+	padding: 5px;
+	margin: 5px;
+}
+
 /* optional button styling like in the preview */
 div.small > img {
 	display: block;
 	margin: 5px auto;
-	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
-	border-width: 5px;
-	border-style: solid;
-	/*border: 4px ridge var(--border);
-	border-radius: 3px;*/
+	border-color: var(--border);
+	/*border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;*/
+	border-width: 2px;
+	border-style: ridge;
+	/*border-radius: 3px;*/
 }
 
 
 section {
 	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
-	border-image-outset: 3px;
-	border-width: 10px;
+	border-image-outset: 4px; /*clips into right too far*/
+	border-image-width: 10px;
 	border-style: solid;
 	/*border: 4px ridge var(--border);
 	border-radius: 3px;*/
-	background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), 
+	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), 
 	url('../images/backgrounds/garden-soil-background.jpg');
 	padding: 5px;
+	margin: 1px;
 }
 
 
