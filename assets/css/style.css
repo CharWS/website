@@ -21,23 +21,43 @@
 	@media (prefers-color-scheme: dark) {
 		:root {
 			--text: #ffeecc;
-			--border: #45293f;
-			--accent: #593a5f;
+			--border: #3a1f04;
+			--accent: #73e5ff;
 			--bg: #336644;
 			--gradientTop: #668855;
 			--gradientBottom: #334444;
-			a:link { color: #ffb0a3; }
+			a:link { color: #73e5ff; }
 		}
 		header {
-			background: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), 
-			url('../images/backgrounds/cherry-background-dithered.png');
+			background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.0)), 
+			url('../images/backgrounds/anime-field-sky.png');
 			background-repeat: no-repeat;
-			background-size: cover;
-
+			background-position: center;
+			background-size: auto;
 		}
 	}
 /* end dark mode styling */
 
+/* start font styling */
+@font-face {
+	font-family: 'cageroll-standard';
+	src:
+	local('cageroll-standard'),
+	url('../fonts/cageroll-standard.otf');
+}
+@font-face {
+	font-family: 'cageroll-cage';
+	src:
+	local('cageroll-cage'),
+	url('../fonts/cageroll-cage.otf');
+}
+@font-face {
+	font-family: 'cageroll-roll';
+	src:
+	local('cageroll-roll'),
+	url('../fonts/cageroll-roll.otf');
+}
+/* end font styling */
 
 * { 
 	box-sizing: border-box;
@@ -47,8 +67,8 @@
 }
 
 body {
+	font-family:'cageroll-standard';
 	padding: 10px;
-	font-family: 'MS PGothic', sans-serif;
 	color: var(--text);
 
 	background: linear-gradient(rgb(0,0,0,0.0),rgb(0,0,0,0.0)), 
@@ -63,9 +83,9 @@ body {
 .container {
 	max-width: 60rem;
 	margin: 5vw auto 12px auto;
-	box-shadow: 0 0 0 4px #b0a987;
+	/*box-shadow: 0 0 0 4px #b0a987;
 	outline: dashed 8px #993d41;
-	/*border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
+	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
 	border-image-outset: 8px;
 	border-width: 20px;
 	border-style: solid;
@@ -78,12 +98,14 @@ body {
 	padding: 5px;
 	gap: 5px;
 
-	background-color: var(--gradientTop);
+	/* container background pattern */
+
+	/*background-color: var(--gradientTop);
 	background-image:  linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(30deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(150deg, var(--bg) 12%, transparent 12.5%, transparent 87%, var(--bg) 87.5%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg)), linear-gradient(60deg, var(--bg) 25%, transparent 25.5%, transparent 75%, var(--bg) 75%, var(--bg));
 	background-size: 20px 35px;
-	background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
-	/* container background pattern 
-	background-color: var(--gradientBottom);
+	background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;*/
+
+	/*background-color: var(--gradientBottom);
 	background-image: linear-gradient(rgb(0,0,0,0.1),rgb(0,0,0,0.1)), 
 	url('../images/backgrounds/wildflower-meadow-small.jpg');
 	repeating-radial-gradient( circle at 0 0, transparent 0, var(--gradientBottom) 9px ), repeating-linear-gradient( var(--bg), var(--bg));*/
@@ -97,30 +119,32 @@ body {
 
 
 header {
-	background-size: cover;
-	background-position: center;
+	/*background-position: 90% 90%;*/
 	width: 100%;
 	height: 200px; /* change banner height here*/
 	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
-	border-image-outset: 3px 0px;
-	border-width: 10px;
+	border-image-outset: 10px 10px;
+	border-width: 20px;
 	border-style: solid;
 	/*border: 4px ridge var(--border);
 	border-radius: 3px;*/
 	position: relative;
+	padding: 10px;
+	margin: 10px;
+
 }
 header span {
 	/* header text */
 	font-size: 3rem;
 	position: absolute;
-	bottom: 0;
+	bottom: -10px;
 	right: 5px;
-	margin: 5px;
+	margin: 0px;
 	font-weight: bold;
-	color: #3bb547; /*main color*/
+	color: #1e711b; /*main color*/
 	text-shadow: 
-		-1px -1px #f697ff, /*highlight*/
-		1px 1px #435159; /*dark shadow*/
+		-1px -1px #73e5ff, /*highlight*/
+		1px 1px #8800ff; /*dark shadow*/
 }
 
 ul.nopoints {
@@ -137,8 +161,9 @@ nav {
 	border-style: solid;
 	/*border-radius: 3px;*/
 	padding: 5px;
-	background: linear-gradient(rgb(0,0,0,0.4),rgb(0,0,0,0.4)), 
-	url('../images/tiles/papyrus-tiles.jpg');
+	margin: 5px;
+	background: linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.0)), 
+	url('../images/backgrounds/cotton-fabric.jpg');
 }
 nav div {
 	text-align: center;
@@ -154,7 +179,7 @@ nav a {
 	text-decoration: none;
 }
 nav a:link, nav a:visited { 
-	color: #8060b6;
+	color: #73e5ff;
 }
 /*nav a:hover, nav a:focus {
 	background: var(--bg) background color of nav with mouse hover currently same as base
@@ -171,7 +196,7 @@ article {
 /* optional button styling like in the preview */
 div.small > img {
 	display: block;
-	margin: 5px auto;
+	margin: 10px auto;
 	border-color: var(--border);
 	/*border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;*/
 	border-width: 2px;
@@ -187,8 +212,8 @@ section {
 	border-style: solid;
 	/*border: 4px ridge var(--border);
 	border-radius: 3px;*/
-	background: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), 
-	url('../images/backgrounds/garden-soil-background.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.0),rgba(0, 0, 0, 0.5)), 
+	url('../images/tiles/tiled-swirlies.png');
 	padding: 5px;
 	margin: 1px;
 }
@@ -244,6 +269,6 @@ a:hover, a:focus {
 	text-shadow: 1px 1px 2px #000000; /*hovering links*/
 }
 a:visited {
-	color: #8060b6;
+	color: #73e5ff;
 	text-shadow: 1px 1px 2px #000000; /*visited links*/
 }
