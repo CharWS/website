@@ -139,7 +139,7 @@ body {
 
 .container {
 	max-width: 60rem;
-	margin: 2vw auto 12px auto;
+	margin: 2vh auto 12px auto;
 	/*box-shadow: 0 0 0 4px #b0a987;
 	outline: dashed 8px #993d41;
 	border-image: url('../images/borders/old-wood-border.png') 24 22 24 22;
@@ -318,7 +318,7 @@ section {
 
 footer {
 	text-align: center;
-	margin-bottom: 5vw;
+	margin-bottom: 2vh;
 	font-size: 1rem;
 	text-shadow: 1px 1px 1px #000000;
 }
